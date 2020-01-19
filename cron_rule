@@ -1,0 +1,1 @@
+*/1 * * * * /home/astrok/Projects/school_news/school_news.py >> /home/astrok/Projects/school_news/logs/cront.log 2>&1

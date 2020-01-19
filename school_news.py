@@ -70,12 +70,12 @@ def main():
 
     diff = new_news.difference(old_news)
 
-    show_popup('NORMAL', '39 SCHOOL NEWS:D', 'INFO', f'new request: {dt_now}')
+    show_popup('LOW', '39 SCHOOL NEWS:D', 'INFO', f'new request: {dt_now}')
 
     if diff:
         for d in diff:
             show_popup('CRITICAL', '39 SCHOOL NEWS:D', d[0], d[1])
-            call(f"/usr/bin env telegram-send '{d[0]}: {d[1]}'", shell=True)
+            call(f"/usr/local/bin/telegram-send '{d[0]}: {d[1]}'", shell=True)
             logging.info(f'{d[0]}: {d[1]}')
 
 
